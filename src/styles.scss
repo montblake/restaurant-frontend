@@ -1,0 +1,340 @@
+/* GLOBAL STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&family=Rokkitt:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    font-size: 10px;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    text-align: center;
+    color: whitesmoke;
+    font-family: Rokkitt, serif;
+}
+
+.topNav {
+    height: 5vh;
+    width: 100%;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 0; left: 0;
+    z-index: 40;
+    padding: 1rem 4rem;
+}
+
+
+.mainNav {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 50;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: whitesmoke;
+    letter-spacing: .4rem;
+}
+
+.mainNav > div {
+    margin: 2rem 3rem;
+}
+
+#logo {
+    font-family: Rokkitt, serif;
+    font-weight: 100;
+    font-size: 15vw;
+    letter-spacing: 1rem;
+    color: rgb(140, 206, 77);
+    text-shadow: 0 0 5px black;
+    position: sticky;
+    top: 0; left: 0;
+    width: 100%;
+    z-index: 25;
+    margin-top: 33vh;
+    padding: 1rem 0 4rem 0;
+    transition: background-color .5s, font-size 1s;
+}
+
+#first-sect {
+    position: relative;
+    z-index: 0;
+    background: rgba(0,0,0,0);
+    /* background-attachment: fixed;
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 45%;
+    background-image: url("./images/jirayu-koontholjinda-wtpibGwNv1k-unsplash.jpg"); */
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+#second-sect {
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -10;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 45%;
+    background-image: url("./images/forge-mussels.jpeg");
+    height: 100vh;
+    width: 100vw;
+}
+
+footer {
+    height: 7.5vh;
+    background: black;
+    position: fixed;
+    bottom: 0; left: 0;
+    width: 100%;
+    z-index: 25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    font-weight: 100;
+    font-size: 7.2rem;
+    letter-spacing: 1rem;
+    z-index: 25;
+    height: 7.5vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.footerNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: whitesmoke;
+    letter-spacing: .4rem;
+    font-weight: 400;
+}
+
+.footerNav > div {
+    margin: 1rem 2rem;
+}
+
+.content {
+    background:black;
+    /* margin-top: 87.5vh; */
+    margin-bottom: 7.5vh;
+    position: relative;
+    top: 45%;
+    z-index: 20; 
+}
+
+.content-child {
+    background: black;
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+}
+
+#c1, #c3 {
+    flex-direction: row;
+}
+
+#c2 {
+    flex-direction: row-reverse;
+}
+
+.content-image {
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wider {
+    width: auto;
+    max-height: 100%;
+}
+
+.taller {
+    max-width: 50vw;
+    height: auto;
+    
+
+}
+
+.content-text {
+    width: 50%;
+    height: 100%;
+    background: url("./images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 2rem;
+}
+
+.content-text > h2 {
+    text-align: center;
+    font-size: 4.8rem;
+    letter-spacing: 1rem;
+    line-height: 4rem;
+    font-weight: 100;
+    color: rgb(140, 206, 77);
+    margin-bottom: 2.4rem;
+}
+
+.content-text > p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    width: 80%;
+    align-self: center;
+}
+
+.content-text > div {
+    margin-top: 3.2rem;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background:rgb(140, 206, 77);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    align-self: center;
+}
+
+/* TOP NAV STYLING */
+
+.deets {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    letter-spacing: .15rem;
+}
+
+.address {
+    margin-right: 2rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    background: whitesmoke;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.iconicon {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+}
+
+/* LIMIT TEXT WIDTH AT WIDE SCREENS */
+.text-limiter {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* MENU SPECIFIC */
+#menu {
+    background: black;
+    padding: 6rem 6rem 12rem 6rem;
+}
+
+#menu h2 {
+    font-family: Rokkitt, serif;
+    font-weight: 100;
+    font-size: 9vw;
+    letter-spacing: 1rem;
+    color: rgb(140, 206, 77);
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu li {
+    margin-bottom: 2.4rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: whitesmoke;
+}
+
+#menu h3 {
+    font-size: 1.4rem;
+}
+
+#menu h4 {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+#menu h5 {
+    font-size: 1.2rem;
+}
+
+/* TOP OF MENU NAV */
+.menuNav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: whitesmoke;
+    letter-spacing: .4rem;
+}
+
+.menuNav > div {
+    margin: 2rem 3rem;
+    border: 1px solid whitesmoke;
+    padding: 1rem 2rem;
+}
+
+.menuNav > div:hover {
+    color: rgb(70,103,38);
+}
+
+.menuNav > div:active {
+    border: 1px solid rgb(70,103,38);
+}
+
