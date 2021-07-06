@@ -63,7 +63,7 @@ function Content(props) {
                     <Index />
                 </Route>
                 <Route
-                    path="/menus"
+                    exact path="/menus"
                     render={rp => (
                         <Menus
                             {...rp}
@@ -80,7 +80,9 @@ function Content(props) {
                             createDish={createDish}
                         />
                     )}
-                />   
+                />  
+                
+                 
                 <Route
                     path="/menus/:id"
                     render={rp => (

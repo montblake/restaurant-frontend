@@ -5,7 +5,7 @@ function Menus(props) {
     const loaded = () => {
         return props.dishes.map((dish) => (
             <div key={dish._id} className="dish">
-                <Link to={`menu/${dish._id}`}>
+                <Link to={`menus/${dish._id}`}>
                     <h3>{dish.name}</h3>
                 </Link>
                 <h4>{dish.description}</h4>
@@ -27,8 +27,14 @@ function Menus(props) {
 
     return (
         <div className="content">
-            <h2>The Menus of Chartreuse</h2>
-            { props.dishes ? loaded() : loading() }
+            <h2>Le Menu</h2>
+            <Link to="/menus/new">
+                <div id="newDishBtn">Add New Dish</div>
+            </Link>
+            <div class="menu-container">
+                { props.dishes ? loaded() : loading() }
+            </div>
+            
         </div>
     );
 }
