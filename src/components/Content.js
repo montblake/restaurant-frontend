@@ -11,7 +11,7 @@ import ComingSoon from "../pages/ComingSoon";
 
 function Content(props) {
     const [ dishes, setDishes ] = useState(null);
-    const URL = "http://localhost:4000/menus/"; 
+    const URL = "http://localhost:4000/menu/"; 
 
     // fetch menu data from the backend
     const getDishes = async () => {
