@@ -75,7 +75,7 @@ header {
     z-index: 25;
     margin-top: 33vh;
     padding: 1rem 0 4rem 0;
-    transition: background-color .5s, font-size 1s;
+    transition: background-color .5s, font-size .25s;
 }
 
 #overlay-container {
@@ -378,7 +378,9 @@ h2 {
 
 // Temp
 .menu-container {
-    padding: 2rem 8rem 10vh 8rem;
+    padding: 8rem 8rem 10vh 8rem;
+    border: 1px solid rgb(171, 215, 130);
+    margin: 4rem 8rem;
 }
 
 .dish {
@@ -436,3 +438,10 @@ h2 {
 #backBtn {
     margin-top: 40px;
 }
+
+// MAP
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        height: 100%;
+      }
