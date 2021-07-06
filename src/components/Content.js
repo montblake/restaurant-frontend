@@ -1,40 +1,109 @@
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
+import Index from "../pages/Index";
+import Show from "../pages/Show";
+import Visit from "../pages/Visit";
+import About from "../pages/About";
+import New from "../pages/New";
+import Menus from "../pages/Menus";
+import ComingSoon from "../pages/ComingSoon";
+
 
 function Content(props) {
+    const [ dishes, setDishes ] = useState(null);
+    const URL = "http://localhost:4000/menus/"; 
+
+    // fetch menu data from the backend
+    const getDishes = async () => {
+        const response = await fetch(URL);
+        const data = await response.json();
+        setDishes(data);
+    };
+
+    // function for creating new menu items
+    const createDish = async (dish) => {
+        await fetch(URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "Application/json",
+            },
+            body: JSON.stringify(dish),
+        });
+        getDishes();
+    };
+
+    // function to update an existing dish
+    const updateDish = async (dish, id) => {
+        await fetch(URL + id, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "Application/json",
+            },
+            body: JSON.stringify(dish),
+        });
+        getDishes();
+    };
+
+    // function to delete dishes from database
+    const deleteDish = async id => {
+        await fetch(URL + id, {
+            method: "DELETE",
+        });
+        getDishes();
+    };
+
+    // On loading, call for data
+    useEffect(() => getDishes(), []);
+
+
     return (
-        <div className="content">
-            <div id="c1" className="content-child">
-                <div className="content-text">
-                    <h2>visit chartreuse</h2>
-                    <p>Tuesday - Saturday, 5PM–11PM</p>
-                    <p>Sundays, 4PM–10PM</p>
-                    <div>Reserve a table</div>
-                </div>
-                <div className="content-image">
-                    <img className="content-image-img taller" src="./images/forge-science.jpeg" />
-                </div>
-            </div>
-            <div id="c2" className="content-child">
-                <div className="content-text">
-                    <h2>our story</h2>
-                    <p>Seitan man braid freegan semiotics glossier mlkshk, etsy raw denim bitters distillery polaroid. Ethical selfies small batch raw denim, beard readymade street art irony activated charcoal vice tumblr salvia williamsburg forage meditation. You probably haven't heard of them keytar kogi street art af, salvia organic hexagon offal tilde scenester XOXO echo park quinoa.</p>
-                    <div>Meet the team</div>
-                </div>
-                <div className="content-image">
-                    <img className="content-image-img wider" src="./images/forge-interior.jpeg" />
-                </div>
-            </div>
-            <div id="c3" className="content-child">
-                <div className="content-text">
-                    <h2>private events</h2>
-                    <p>Raclette health goth letterpress gochujang polaroid asymmetrical farm-to-table tacos readymade. Meggings forage salvia, polaroid XOXO sriracha 3 wolf moon la croix distillery pour-over prism pitchfork. Thundercats church-key tumblr aesthetic, coloring book swag truffaut blog bicycle rights hella vape taxidermy hot chicken.</p>
-                    <div>Begin Conversation</div>
-                </div>
-                <div className="content-image">
-                    <img className="content-image-img wider" src="./images/forge-feast.jpeg" />
-                </div>
-            </div>
-       </div>
+        <>
+            <Switch>
+                <Route exact path="/">
+                    <Index />
+                </Route>
+                <Route
+                    path="/menus"
+                    render={rp => (
+                        <Menus
+                            {...rp}
+                            dishes={dishes}
+                        />
+                    )}
+                />
+                <Route
+                    path="/menus/new"
+                    render={rp => (
+                        <New
+                            {...rp}
+                            dishes={dishes}
+                            createDish={createDish}
+                        />
+                    )}
+                />   
+                <Route
+                    path="/menus/:id"
+                    render={rp => (
+                        <Show
+                            {...rp}
+                            dishes={dishes}
+                            updateDish={updateDish}
+                            deleteDish={deleteDish}
+                        />
+                    )}
+                />
+                <Route path="/visit">
+                    <Visit />
+                </Route>
+                <Route path="/about">
+                    <About />
+                </Route>
+                <Route path="/comingsoon">
+                    <ComingSoon />
+                </Route>
+                
+            </Switch>
+        </>
     );
 }
 
