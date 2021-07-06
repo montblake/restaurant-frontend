@@ -31,7 +31,7 @@ function Menus(props) {
             <Link to="/menus/new">
                 <div id="newDishBtn">Add New Dish</div>
             </Link>
-            <div class="menu-container">
+            <div className="menu-container">
                 { props.dishes ? loaded() : loading() }
             </div>
             
