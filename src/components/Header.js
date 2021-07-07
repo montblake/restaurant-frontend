@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 
 function Header(props) {
+
     return (
-        <header>
+        <header id="header">
             <div className="topNav text-limiter">
                 <div className="deets">
                     <div className="address"> 312 Green Street, Fulton Market, Chicago</div>

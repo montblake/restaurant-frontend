@@ -55,27 +55,34 @@ header {
     text-transform: uppercase;
     font-weight: 400;
     color: whitesmoke;
-    letter-spacing: .4rem;
+    letter-spacing: .5rem;
 }
 
 .mainNav > div {
     margin: 2rem 3rem;
 }
 
-#logo {
-    font-family: Rokkitt, serif;
-    font-weight: 100;
-    font-size: 15vw;
-    letter-spacing: 1rem;
-    color: rgb(140, 206, 77);
-    text-shadow: 0 0 5px black;
+#logoLink {
     position: sticky;
     top: 0; left: 0;
     width: 100%;
-    z-index: 25;
+    z-index: 60;
     margin-top: 33vh;
-    padding: 1rem 0 4rem 0;
-    transition: background-color .5s, font-size .25s;
+    padding-top: 1rem;
+}
+
+#logoLink a {
+    color: rgb(140, 206, 77);
+    text-shadow: 0 0 5px black;
+    text-decoration: none;
+}
+
+#logo {
+    font-family: Rokkitt, serif;
+    font-weight: 700;
+    font-size: 15vw;
+    letter-spacing: 2vw;
+    transition: font-size .25s;
 }
 
 #overlay-container {
@@ -134,7 +141,7 @@ footer {
     font-size: 1.6rem;
     text-transform: uppercase;
     color: whitesmoke;
-    letter-spacing: .4rem;
+    letter-spacing: .5rem;
     font-weight: 400;
 }
 
@@ -156,13 +163,31 @@ footer {
     margin: 1rem 2rem;
 }
 
+.mainNav > a:hover,
+.footerNav > a:hover {
+    color: rgb(140, 206, 77);
+    text-decoration: none;
+}
+
+.mainNav > a:active,
+.footerNav > a:active {
+    color: rgb(140, 206, 77);
+    text-decoration: underline;
+}
+
 .content {
     background: black;
-    /* margin-top: 87.5vh; */
-    margin-bottom: 7.5vh;
     position: relative;
     top: 45%;
     z-index: 20; 
+    min-height: 100vh;
+}
+
+.content p {
+    font-size: 1.6rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .content-child {
@@ -263,10 +288,19 @@ footer {
     font-size: 1.4rem;
 }
 
-.phone {
+.phone, .phone:visited {
     text-decoration: none;
     color: whitesmoke;
     font-size: 1.4rem;
+}
+
+.phone:hover {
+    color: rgb(140, 206, 77);
+}
+
+.phone:active {
+    color: rgb(140, 206, 77);
+    text-decoration: underline;
 }
 
 .social {
@@ -275,7 +309,8 @@ footer {
     align-items: center;
 }
 
-.icon {
+.icon,
+.icon:visited {
     background: whitesmoke;
     border-radius: 50%;
     width: 25px;
@@ -284,6 +319,15 @@ footer {
     justify-content: center;
     align-items: center;
     margin-left: 1rem;
+}
+
+.icon:hover {
+    background: rgb(140, 206, 77);
+}
+
+.icon:active {
+    background: rgb(140, 206, 77);
+    border: 3px solid whitesmoke;
 }
 
 .iconicon {
@@ -378,7 +422,7 @@ h2 {
 
 // Temp
 .menu-container {
-    padding: 8rem 8rem 10vh 8rem;
+    padding: 8rem;
     border: 1px solid rgb(171, 215, 130);
     margin: 4rem 8rem;
 }
@@ -438,10 +482,3 @@ h2 {
 #backBtn {
     margin-top: 40px;
 }
-
-// MAP
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-       #map {
-        height: 100%;
-      }

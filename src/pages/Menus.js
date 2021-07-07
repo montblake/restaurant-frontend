@@ -27,7 +27,7 @@ function Menus(props) {
 
     return (
         <div className="content">
-            <h2>Le Menu</h2>
+            <h2>menu</h2>
             <Link to="/menus/new">
                 <div id="newDishBtn">Add New Dish</div>
             </Link>
