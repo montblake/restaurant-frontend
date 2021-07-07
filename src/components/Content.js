@@ -5,8 +5,9 @@ import Show from "../pages/Show";
 import Visit from "../pages/Visit";
 import About from "../pages/About";
 import New from "../pages/New";
-import Menus from "../pages/Menus";
+import Menu from "../pages/Menu";
 import ComingSoon from "../pages/ComingSoon";
+import Dashboard from "../pages/Dashboard";
 
 
 function Content(props) {
@@ -63,38 +64,6 @@ function Content(props) {
                 <Route exact path="/">
                     <Index />
                 </Route>
-                <Route
-                    exact path="/menus"
-                    render={rp => (
-                        <Menus
-                            {...rp}
-                            dishes={dishes}
-                        />
-                    )}
-                />
-                <Route
-                    path="/menus/new"
-                    render={rp => (
-                        <New
-                            {...rp}
-                            dishes={dishes}
-                            createDish={createDish}
-                        />
-                    )}
-                />  
-                
-                 
-                <Route
-                    path="/menus/:id"
-                    render={rp => (
-                        <Show
-                            {...rp}
-                            dishes={dishes}
-                            updateDish={updateDish}
-                            deleteDish={deleteDish}
-                        />
-                    )}
-                />
                 <Route path="/visit">
                     <Visit />
                 </Route>
@@ -104,6 +73,45 @@ function Content(props) {
                 <Route path="/comingsoon">
                     <ComingSoon />
                 </Route>
+                <Route
+                    path="/menu"
+                    render={rp => (
+                        <Menu
+                            {...rp}
+                            dishes={dishes}
+                        />
+                    )}
+                />
+                <Route
+                    exact path="/dashboard"
+                    render={rp => (
+                        <Dashboard
+                            {...rp}
+                            dishes={dishes}
+                        />
+                    )}
+                />
+                <Route
+                    path="/dashboard/new"
+                    render={rp => (
+                        <New
+                            {...rp}
+                            dishes={dishes}
+                            createDish={createDish}
+                        />
+                    )}
+                />  
+                <Route
+                    path="/dashboard/:id"
+                    render={rp => (
+                        <Show
+                            {...rp}
+                            dishes={dishes}
+                            updateDish={updateDish}
+                            deleteDish={deleteDish}
+                        />
+                    )}
+                />
                 
             </Switch>
         </>

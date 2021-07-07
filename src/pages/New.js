@@ -53,8 +53,8 @@ function New(props) {
                     />
                     <input type="submit" value="Create Dish" />
                 </form>
-                <Link to="/menus">
-                    <div id="backBtn">Return to Menu Page</div>
+                <Link to="/dashboard">
+                    <div id="backBtn">Return to Dashboard</div>
                 </Link>
             </section>
         </div>

@@ -12,7 +12,7 @@ function Index() {
                     <a href="https://www.opentable.com" target="_blank" rel="noreferrer"><div>Reserve a table</div></a>
                 </div>
                 <div className="content-image">
-                    <img className="content-image-img taller" src="./images/forge-science.jpeg" alt="" />
+                    <img className="content-image-img wider" src="./images/lightscape-YyHu_TneCI0-unsplash.jpg" alt="fancy food" />
                 </div>
             </div>
             <div id="c2" className="content-child">
@@ -24,8 +24,9 @@ function Index() {
                     </Link>
                 </div>
                 <div className="content-image">
-                    <img className="content-image-img wider" src="./images/forge-interior.jpeg" alt=""/>
+                    <img className="content-image-img taller" src="./images/jirayu-koontholjinda-wtpibGwNv1k-unsplash.jpg" alt=""/>
                 </div>
+                
             </div>
             <div id="c3" className="content-child">
                 <div className="content-text">
@@ -34,7 +35,7 @@ function Index() {
                     <a href="mailto:events@chartreuse.com"><div>Begin Conversation</div></a>
                 </div>
                 <div className="content-image">
-                    <img className="content-image-img wider" src="./images/forge-feast.jpeg" alt=""/>
+                    <img className="content-image-img wider" src="./images/mads-eneqvist-izxSMW8I5Ts-unsplash.jpg" alt=""/>
                 </div>
             </div>
        </div>

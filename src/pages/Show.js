@@ -17,12 +17,12 @@ function Show(props) {
         event.preventDefault();
         props.updateDish(editForm, dish._id);
         // redirect people back to menu index
-        props.history.push("/menus")
+        props.history.push("/dashboard")
     }
 
     const removeDish = () => {
         props.deleteDish(dish._id);
-        props.history.push("/menus");
+        props.history.push("/dashboard");
     }
     
     return (
@@ -53,8 +53,8 @@ function Show(props) {
                     <input type="submit" value="Update Dish" />
                 </form>
                 <button id="delete" onClick={removeDish}>DELETE</button>
-                <Link to="/menus">
-                <div id="backBtn">Return to Menu Page</div>
+                <Link to="/dashboard">
+                <div id="backBtn">Return to Dashboard</div>
             </Link>
             </section>
             

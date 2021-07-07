@@ -30,8 +30,8 @@ function Header(props) {
                 </div>
             </div>  
             <nav className="mainNav">
-                <Link to="/menus">
-                    <div>Menus</div>
+                <Link to="/menu">
+                    <div>Menu</div>
                 </Link>
                 <Link to="/visit">
                     <div>Hours &amp; Location</div>
