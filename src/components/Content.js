@@ -11,7 +11,8 @@ import ComingSoon from "../pages/ComingSoon";
 
 function Content(props) {
     const [ dishes, setDishes ] = useState(null);
-    const URL = "https://protected-garden-18741.herokuapp.com/menu/"; 
+    // const URL = "https://protected-garden-18741.herokuapp.com/menu/"; 
+    const URL = "http://localhost:4000/menu/"; 
 
     // fetch menu data from the backend
     const getDishes = async () => {
