@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 function Index() {
     return (
         <div className="content">
+             <div className="arrow"></div>
             <div id="c1" className="content-child">
                 <div className="content-text">
                     <h2>visit chartreuse</h2>

@@ -26,6 +26,7 @@ function Menus(props) {
 
     return (
         <div className="content">
+             <div className="arrow"></div>
             <h2>menu</h2>
             <div className="menu-container">
                 { props.dishes ? loaded() : loading() }
