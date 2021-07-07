@@ -90,6 +90,7 @@ header {
     background: rgba(0,0,0,0);
     height: 100vh;
     overflow-y: scroll;
+
 }
 
 #fixed-image {
@@ -178,7 +179,7 @@ footer {
     top:40%;
     z-index: 20; 
     min-height: 100vh;
-    padding: 10vh;
+    padding: 10vh 0 7.5vh 0;
 }
 
 .content p {
@@ -495,3 +496,61 @@ h2 {
 #backBtn {
     margin-top: 40px;
 }
+
+
+// TEAM MEMBERS
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2.4rem;
+}
+
+.team-member {
+    width: 33%;
+}
+
+.team-member > h3 {
+    font-size: 1.6rem;
+}
+
+.team-member img {
+    box-sizing: border-box;
+    width: 90%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    transition: filter 1s;
+}
+
+.team-member img:hover {
+    -webkit-filter: none; /* Safari 6.0 - 9.0 */
+    filter: none;
+    border: 1px solid rgb(140, 206, 77);
+}
+
+.team-member img:active {
+    -webkit-filter: none; /* Safari 6.0 - 9.0 */
+    filter: none;
+    border: 3px solid rgb(140, 206, 77);
+}
+
+
+
+#team-paras {
+    height: 200px;
+}
+
+#chef-para, #pastry-para, #partner-para {
+    display: none;
+}
+
+// Triangle/Arrow
+.arrow{
+    margin: -7.5vh auto 2.5vh auto;
+    
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 40px solid rgba(140, 206, 77, .5);
+  }
