@@ -27,37 +27,41 @@ function Show(props) {
     
     return (
         <div className="content">
-            <section id="editDish">
-                <form onSubmit={handleSubmit} >
+            <div className="arrow"></div>
+                <h2>edit menu item</h2>
+                <form onSubmit={handleSubmit} className="menuForm">
                     <input
                         type="text"
                         value={editForm.name}
                         name="name"
-                        placeholder="name of dish"
+                        placeholder="Item Name"
                         onChange={handleChange}
                     />
                     <input
                         type="text"
                         value={editForm.description}
                         name="description"
-                        placeholder="description of dish"
+                        placeholder="Description"
                         onChange={handleChange}
                     />
                     <input
                         type="text"
                         value={editForm.price}
                         name="price"
-                        placeholder="price"
+                        placeholder="Price"
                         onChange={handleChange}
                     />
-                    <input type="submit" value="Update Dish" />
+                    <div className="button-group">
+                        <input type="submit" value="UPDATE" />
+                        <button id="delete" onClick={removeDish}>DELETE</button> 
+                    </div>
+                    
                 </form>
-                <button id="delete" onClick={removeDish}>DELETE</button>
+                
                 <Link to="/dashboard">
-                <div id="backBtn">Return to Dashboard</div>
-            </Link>
-            </section>
-            
+                    <div id="backBtn">BACK TO DASHBOARD</div>
+                </Link>
+                
         </div>
     );
    

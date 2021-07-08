@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Menus(props) {
     //  what to do when menu data has loaded
@@ -26,6 +26,11 @@ function Menus(props) {
         <div className="content">
              <div className="arrow"></div>
             <h2>menu</h2>
+            <nav className="menuNav">
+                <div>Drinks</div>
+                <div>Dinner</div>
+                <div>Dessert</div>
+            </nav>
             <div className="menu-container">
                 { props.dishes ? loaded() : loading() }
             </div>

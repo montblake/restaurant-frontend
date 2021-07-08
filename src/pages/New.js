@@ -27,36 +27,38 @@ function New(props) {
 
     return (
         <div className="content">
-            <section id="addNewDish">
-                <h3>Add New Dish</h3>
-                <form onSubmit={handleSubmit} >
+            <div className="arrow"></div>
+                <h2>add menu item</h2>
+                <form onSubmit={handleSubmit} className="menuForm">
                     <input
                         type="text"
                         value={newForm.name}
                         name="name"
-                        placeholder="name of dish"
+                        placeholder="Item Name"
                         onChange={handleChange}
                     />
                     <input
                         type="text"
                         value={newForm.description}
                         name="description"
-                        placeholder="description of dish"
+                        placeholder="Description"
                         onChange={handleChange}
                     />
                     <input
                         type="text"
                         value={newForm.price}
                         name="price"
-                        placeholder="price"
+                        placeholder="Price"
                         onChange={handleChange}
                     />
-                    <input type="submit" value="Create Dish" />
+                    
+                    <div className="button-group">
+                    <input type="submit" value="CREATE MENU ITEM" />
+                    </div>
                 </form>
                 <Link to="/dashboard">
-                    <div id="backBtn">Return to Dashboard</div>
+                    <div id="backBtn">BACK TO DASHBOARD</div>
                 </Link>
-            </section>
         </div>
     );
 }

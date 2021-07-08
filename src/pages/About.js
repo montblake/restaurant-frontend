@@ -1,21 +1,34 @@
 function About(props) {
     function revealInformation(event) {
-        const chef = document.querySelector("#chef-para");
-        const partner = document.querySelector("#partner-para");
-        const pastry = document.querySelector("#pastry-para");
+        const chef = document.querySelector("#chef-img");
+        const chefP = document.querySelector("#chef-para");
+        const partner = document.querySelector("#partner-img");
+        const partnerP = document.querySelector("#partner-para");
+        const pastry = document.querySelector("#pastry-img");
+        const pastryP = document.querySelector("#pastry-para");
+
 
         if (event.target.closest('div').id === "chef") {
-            chef.style.display = "block";
-            partner.style.display = "none";
-            pastry.style.display = "none";
+            chef.style.filter = "none";
+            chefP.style.display = "block";
+            partner.style.filter = "grayscale(100%)";
+            partnerP.style.display = "none";
+            pastry.style.filter = "grayscale(100%)";
+            pastryP.style.display = "none";
         } else if (event.target.closest('div').id === "partner") {
-            chef.style.display =  "none";
-            partner.style.display = "block";
-            pastry.style.display = "none";
+            chef.style.filter = "grayscale(100%)";
+            chefP.style.display = "none";
+            partner.style.filter = "none";
+            partnerP.style.display = "block";
+            pastry.style.filter = "grayscale(100%)";
+            pastryP.style.display = "none";
         } else if (event.target.closest('div').id === "pastry") {
-            chef.style.display = "none";
-            partner.style.display = "none";
-            pastry.style.display = "block";
+            chef.style.filter = "grayscale(100%)";
+            chefP.style.display = "none";
+            partner.style.filter = "grayscale(100%)";
+            partnerP.style.display = "none";
+            pastry.style.filter = "none";
+            pastryP.style.display = "block";
         }
     
 
@@ -26,23 +39,23 @@ function About(props) {
         <div className="content special">
             <div className="arrow"></div>
             <h2>story</h2>
-            <p>Lyft godard, gochujang air plant everyday carry tumblr bitters wolf cloud bread hexagon mlkshk 8-bit tote bag. Kale chips messenger bag forage, vice fashion axe synth disrupt echo park wayfarers celiac yuccie hell of cloud bread. Blue bottle chicharrones activated charcoal, succulents kitsch banjo vegan chartreuse.</p>
-            <p>Lyft distillery chillwave raw denim hexagon pour-over banjo tilde put a bird on it ugh affogato. Asymmetrical iceland hammock cornhole microdosing green juice. Crucifix cold-pressed kombucha cardigan semiotics wolf moon polaroid. Artisan ramps iPhone deep v iceland. Mumblecore farm-to-table chia green juice, vinyl gochujang lomo sriracha tacos cliche literally pour-over. </p>
+            <p className="tinted">Lyft godard, gochujang air plant everyday carry tumblr bitters wolf cloud bread hexagon mlkshk 8-bit tote bag. Kale chips messenger bag forage, vice fashion axe synth disrupt echo park wayfarers celiac yuccie hell of cloud bread. Blue bottle chicharrones activated charcoal, succulents kitsch banjo vegan chartreuse. Lyft distillery chillwave raw denim hexagon pour-over banjo tilde put a bird on it ugh affogato. Asymmetrical iceland hammock cornhole microdosing green juice. Crucifix cold-pressed kombucha cardigan semiotics wolf moon polaroid. Artisan ramps iPhone deep v iceland. Mumblecore farm-to-table chia green juice, vinyl gochujang lomo sriracha tacos cliche literally pour-over. </p>
+    
             <h2>team</h2>
             <div className="team">
                 <div className="team-member" onClick={revealInformation} id="partner">
-                    <img src="./images/rui-silvestre-jCeVRUQslTs-unsplash.jpg" />
+                    <img src="./images/rui-silvestre-jCeVRUQslTs-unsplash.jpg" alt="Rui Silvestre"id="partner-img"/>
                     <h3>Rui Silvestre</h3>
                     <h4>Partner/General Manager</h4>
                 </div>
                 <div className="team-member" onClick={revealInformation} id="chef">
-                    <img src="./images/vadim-markin-BFtIlGdWKbk-unsplash.jpg" />
+                    <img src="./images/vadim-markin-BFtIlGdWKbk-unsplash.jpg" alt="Vadin Markin" id="chef-img" />
                     <h3>Vadin Markin</h3>
                     <h4>Chef/Owner</h4>
                 </div>
                 
                 <div className="team-member" onClick={revealInformation} id="pastry">
-                    <img src="./images/anastasia-mihalkova-EFUABKVppR4-unsplash.jpg" />
+                    <img src="./images/anastasia-mihalkova-EFUABKVppR4-unsplash.jpg"  alt="Anastasia Mihalkova" id="pastry-img"/>
                     <h3>Anastasia Mihalkova</h3>
                     <h4>Pastry Chef</h4>
                 </div>

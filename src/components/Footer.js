@@ -38,6 +38,12 @@ function Footer(props) {
                     </Link>
                 </div>
             </div>
+            <div className="admin-entrance">
+                <Link to="/dashboard">
+                   <div>Admin Dashboard</div>
+                </Link>
+                
+            </div>
        </footer>
     );
 }

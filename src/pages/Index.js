@@ -8,9 +8,11 @@ function Index() {
             <div id="c1" className="content-child">
                 <div className="content-text">
                     <h2>visit chartreuse</h2>
-                    <p>Tuesday - Saturday, 5PM–11PM</p>
-                    <p>Sundays, 4PM–10PM</p>
-                    <a href="https://www.opentable.com" target="_blank" rel="noreferrer"><div>Reserve a table</div></a>
+                    <p>Tuesday - Saturday, 5pm – 11pm</p>
+                    <p>Sundays, 4pm – 10pm</p>
+                    <Link to="/comingsoon">
+                        <div>Reserve a table</div>
+                    </Link>
                 </div>
                 <div className="content-image">
                     <img className="content-image-img wider" src="./images/lightscape-YyHu_TneCI0-unsplash.jpg" alt="fancy food" />
@@ -25,7 +27,7 @@ function Index() {
                     </Link>
                 </div>
                 <div className="content-image">
-                    <img className="content-image-img taller" src="./images/jirayu-koontholjinda-wtpibGwNv1k-unsplash.jpg" alt=""/>
+                    <img className="content-image-img taller" src="./images/jirayu-koontholjinda-wtpibGwNv1k-unsplash.jpg" alt="..."/>
                 </div>
                 
             </div>
@@ -36,7 +38,7 @@ function Index() {
                     <a href="mailto:events@chartreuse.com"><div>Begin Conversation</div></a>
                 </div>
                 <div className="content-image">
-                    <img className="content-image-img wider" src="./images/mads-eneqvist-izxSMW8I5Ts-unsplash.jpg" alt=""/>
+                    <img className="content-image-img wider" src="./images/mads-eneqvist-izxSMW8I5Ts-unsplash.jpg" alt="..."/>
                 </div>
             </div>
        </div>
