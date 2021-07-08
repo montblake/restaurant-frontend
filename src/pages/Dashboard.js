@@ -27,10 +27,15 @@ function Menus(props) {
     return (
         <div className="content">
             <div className="arrow"></div>
-            <h2>menu</h2>
+            <h2>dashboard</h2>
             <Link to="/dashboard/new">
                 <div id="newDishBtn">ADD MENU ITEM</div>
             </Link>
+            <nav className="menuNav">
+                <div>Drinks</div>
+                <div>Dinner</div>
+                <div>Dessert</div>
+            </nav>
             <div className="menu-container">
                 { props.dishes ? loaded() : loading() }
             </div>

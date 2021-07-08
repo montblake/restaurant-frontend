@@ -12,8 +12,8 @@ import Dashboard from "../pages/Dashboard";
 
 function Content(props) {
     const [ dishes, setDishes ] = useState(null);
-    const URL = "https://protected-garden-18741.herokuapp.com/menu/"; 
-    // const URL = "http://localhost:4000/menu/"; 
+    // const URL = "https://protected-garden-18741.herokuapp.com/menu/"; 
+    const URL = "http://localhost:4000/menu/"; 
 
     // fetch menu data from the backend
     const getDishes = async () => {
@@ -24,6 +24,13 @@ function Content(props) {
 
     // function for creating new menu items
     const createDish = async (dish) => {
+
+        // if  (dish.vegan === "on") dish.vegan = true;
+        // if (dish.vegetarian === "on") dish.vegetarian = true;
+        // if (dish.glutenFree === "on") dish.glutenFree = true;
+        if (dish.menuGroup === "dinner") dish.drinkType = "";
+        if (dish.menuGroup === "drinks") dish.dishType = "";
+
         await fetch(URL, {
             method: "POST",
             headers: {

@@ -515,7 +515,7 @@ h2 {
     align-items: center;
     width: 160px;
     height: 40px;
-    margin-bottom: 5vh;
+    margin-bottom: 25px;
 }
 
 .content a {
@@ -613,7 +613,7 @@ h2 {
     border: 1px solid rgb(140, 206, 77);
     background: rgba(0,0,0,0.5);
     padding: 4rem;
-    width: 66%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -632,14 +632,16 @@ h2 {
     background: goldenrod;
     border: 1px solid black;
     padding: 1rem 2rem;
-    width: 45%;
+    width: 50%;
+    margin-right: 1rem;
 }
 
 .menuForm  button {
     background: orangered;
     border: 1px solid black;
     padding: 1rem 2rem;
-    width: 45%;
+    width: 50%;
+    margin-left: 1rem;
 }
 
 .button-group {
@@ -648,4 +650,35 @@ h2 {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+}
+
+fieldset {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(239, 249, 233);
+    border: none;
+    margin: 0 0 2rem 0;
+}
+
+fieldset > div {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    color:rgb(140, 206, 77);
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    padding: 1rem;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 20px;
+    height: 20px;
+
 }
