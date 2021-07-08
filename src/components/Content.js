@@ -14,8 +14,8 @@ function Content(props) {
     const [ dishes, setDishes ] = useState([]);
     const [ currentMenu, setCurrentMenu ] = useState([]);
 
-    // const URL = "https://protected-garden-18741.herokuapp.com/menu/"; 
-    const URL = "http://localhost:4000/menu/"; 
+    const URL = "https://protected-garden-18741.herokuapp.com/menu/"; 
+    // const URL = "http://localhost:4000/menu/"; 
 
     // fetch menu data from the backend
     const getDishes = async () => {
