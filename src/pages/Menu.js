@@ -2,11 +2,11 @@
 // import { useState } from "react";
 
 function Menus(props) {
-  
-
+    console.log(props.currentMenu);
+    const currentMenuDishes = props.dishes.filter(dish => dish.menuGroup === props.currentMenu.menu);
     //  what to do when menu data has loaded
     const loaded = () => {
-        return props.dishes.map((menuItem) => (
+        return currentMenuDishes.map((menuItem) => (
             <div key={menuItem._id} className="dish">
                 <h3>{menuItem.name}</h3>
                 <h4>{menuItem.description}</h4>
