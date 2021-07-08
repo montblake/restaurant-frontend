@@ -32,9 +32,9 @@ function Menus(props) {
                 <div id="newDishBtn">ADD MENU ITEM</div>
             </Link>
             <nav className="menuNav">
-                <div>Drinks</div>
-                <div>Dinner</div>
-                <div>Dessert</div>
+                <div onClick={props.handleMenuRequest}>drinks</div>
+                <div onClick={props.handleMenuRequest}>dinner</div>
+                <div onClick={props.handleMenuRequest}>dessert</div>
             </nav>
             <div className="menu-container">
                 { props.dishes ? loaded() : loading() }

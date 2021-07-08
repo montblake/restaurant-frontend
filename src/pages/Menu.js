@@ -1,15 +1,18 @@
 // import { Link } from "react-router-dom";
+// import { useState } from "react";
 
 function Menus(props) {
+  
+
     //  what to do when menu data has loaded
     const loaded = () => {
-        return props.dishes.map((dish) => (
-            <div key={dish._id} className="dish">
-                <h3>{dish.name}</h3>
-                <h4>{dish.description}</h4>
-                <h5>{dish.price}</h5>
+        return props.dishes.map((menuItem) => (
+            <div key={menuItem._id} className="dish">
+                <h3>{menuItem.name}</h3>
+                <h4>{menuItem.description}</h4>
+                <h5>{menuItem.price}</h5>
             </div>
-        ));
+        ));  
     };
 
     // what to do if menu data HAS NOT loaded
@@ -27,9 +30,9 @@ function Menus(props) {
              <div className="arrow"></div>
             <h2>menu</h2>
             <nav className="menuNav">
-                <div>Drinks</div>
-                <div>Dinner</div>
-                <div>Dessert</div>
+                <div onClick={props.handleMenuRequest}>drinks</div>
+                <div onClick={props.handleMenuRequest}>dinner</div>
+                <div onClick={props.handleMenuRequest}>dessert</div>
             </nav>
             <div className="menu-container">
                 { props.dishes ? loaded() : loading() }
@@ -40,3 +43,5 @@ function Menus(props) {
 }
 
 export default Menus;
+
+

@@ -38,7 +38,13 @@ function New(props) {
         event.preventDefault();
         console.log("this is the first");
         console.log(newForm);
-        props.createDish(newForm);
+        let preppedForm = {};
+        if (newForm.vegetarian === "") preppedForm.vegetarian = false;
+        if (newForm.vegan === "") preppedForm.vegan = false;
+        if (newForm.glutenFree === "") preppedForm.glutenFree = false;
+        
+        preppedForm = {...newForm, ...preppedForm};
+        props.createDish(preppedForm);
         setNewForm({...newForm, name: "", description: "", price: ""});
     };
 

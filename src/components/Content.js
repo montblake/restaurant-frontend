@@ -11,9 +11,11 @@ import Dashboard from "../pages/Dashboard";
 
 
 function Content(props) {
-    const [ dishes, setDishes ] = useState(null);
-    const URL = "https://protected-garden-18741.herokuapp.com/menu/"; 
-    // const URL = "http://localhost:4000/menu/"; 
+    const [ dishes, setDishes ] = useState([]);
+    const [ currentMenu, setCurrentMenu ] = useState([]);
+
+    // const URL = "https://protected-garden-18741.herokuapp.com/menu/"; 
+    const URL = "http://localhost:4000/menu/"; 
 
     // fetch menu data from the backend
     const getDishes = async () => {
@@ -21,6 +23,16 @@ function Content(props) {
         const data = await response.json();
         setDishes(data);
     };
+
+     //  links buttons to changing state: currentMenu
+     const handleMenuRequest = (event) => {
+        const menuName = event.target.textContent;
+        console.log(menuName);
+        console.log(dishes.filter(dish => dish.menuGroup === menuName))
+        setCurrentMenu(dishes.filter(dish => dish.menuGroup === menuName));
+    };
+
+
 
     // function for creating new menu items
     const createDish = async (dish) => {
@@ -62,8 +74,11 @@ function Content(props) {
     };
 
     // On loading, call for data
-    useEffect(() => getDishes(), []);
-
+    useEffect(() => {
+        getDishes();
+        setCurrentMenu(dishes.filter(dish => dish.menuGroup === "dinner"));
+    }, []);
+ 
 
     return (
         <>
@@ -85,7 +100,9 @@ function Content(props) {
                     render={rp => (
                         <Menu
                             {...rp}
-                            dishes={dishes}
+                            dishes={currentMenu}
+                            handleMenuRequest={handleMenuRequest}
+                
                         />
                     )}
                 />
@@ -94,7 +111,9 @@ function Content(props) {
                     render={rp => (
                         <Dashboard
                             {...rp}
-                            dishes={dishes}
+                            dishes={currentMenu}
+                            handleMenuRequest={handleMenuRequest}
+                            
                         />
                     )}
                 />
@@ -103,7 +122,7 @@ function Content(props) {
                     render={rp => (
                         <New
                             {...rp}
-                            dishes={dishes}
+                            dishes={currentMenu}
                             createDish={createDish}
                         />
                     )}
@@ -113,7 +132,7 @@ function Content(props) {
                     render={rp => (
                         <Show
                             {...rp}
-                            dishes={dishes}
+                            dishes={currentMenu}
                             updateDish={updateDish}
                             deleteDish={deleteDish}
                         />
