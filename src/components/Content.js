@@ -12,7 +12,7 @@ import Dashboard from "../pages/Dashboard";
 
 function Content(props) {
     const [ dishes, setDishes ] = useState([]);
-    const [ currentMenu, setCurrentMenu ] = useState({menu: "dinner"});
+    const [ currentMenu, setCurrentMenu ] = useState({name: "dinner"});
 
     const URL = "https://protected-garden-18741.herokuapp.com/menu/"; 
     // const URL = "http://localhost:4000/menu/"; 
@@ -27,8 +27,31 @@ function Content(props) {
 
      //  links buttons to changing state: currentMenu
      const handleMenuRequest = (event) => {
+         const drinksBtn = document.querySelector("#drinksBtn");
+         const dinnerBtn = document.querySelector("#dinnerBtn");
+         const dessertBtn = document.querySelector("#dessertBtn");
+         
         const menuName = event.target.textContent;
-        setCurrentMenu({menu: menuName});
+        setCurrentMenu({name: menuName});
+
+        if (menuName === "drinks") {
+            drinksBtn.classList.add("currentMenu");
+            dinnerBtn.classList.remove("currentMenu");
+            dessertBtn.classList.remove("currentMenu");
+
+        }
+        if (menuName === "dinner") {
+            drinksBtn.classList.remove("currentMenu");
+            dinnerBtn.classList.add("currentMenu");
+            dessertBtn.classList.remove("currentMenu");
+        }
+        if (menuName === "dessert") {
+            drinksBtn.classList.remove("currentMenu");
+            dinnerBtn.classList.remove("currentMenu");
+            dessertBtn.classList.add("currentMenu");
+        }
+
+
     };
 
 

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Menus(props) {
     console.log(props.currentMenu);
-    const currentMenuDishes = props.dishes.filter(dish => dish.menuGroup === props.currentMenu.menu);
+    const currentMenuDishes = props.dishes.filter(dish => dish.menuGroup === props.currentMenu.name);
 
     //  what to do when menu data has loaded
     const loaded = () => {
@@ -35,9 +35,9 @@ function Menus(props) {
                 <div id="newDishBtn">ADD MENU ITEM</div>
             </Link>
             <nav className="menuNav">
-                <div onClick={props.handleMenuRequest}>drinks</div>
-                <div onClick={props.handleMenuRequest}>dinner</div>
-                <div onClick={props.handleMenuRequest}>dessert</div>
+                <div onClick={props.handleMenuRequest} id="drinksBtn">drinks</div>
+                <div onClick={props.handleMenuRequest} id="dinnerBtn" className="currentMenu">dinner</div>
+                <div onClick={props.handleMenuRequest} id="dessertBtn">dessert</div>
             </nav>
             <div className="menu-container">
                 { props.dishes ? loaded() : loading() }
