@@ -485,6 +485,7 @@ h2:last-of-type {
 
 .dish h3 {
     font-size: 2.4rem;
+    text-transform: capitalize;
 }
 
 .dish a {
@@ -496,6 +497,7 @@ h2:last-of-type {
     font-size: 1.6rem;
     color: rgb(140, 206, 77);
     margin-bottom: .4rem;
+    text-transform: lowercase;
 }
 
 .dish h5 {
