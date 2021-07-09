@@ -1,9 +1,4 @@
 function Menus(props) {
-    console.log(props.currentMenu);
-
-    // const currentMenuDishes = props.dishes.filter(dish => dish.menuGroup === props.currentMenu.name)
-    
- 
     
     
         

@@ -39,7 +39,7 @@ function About(props) {
         <div className="content special">
             <div className="arrow"></div>
             <h2>story</h2>
-            <p className="tinted">Lyft godard, gochujang air plant everyday carry tumblr bitters wolf cloud bread hexagon mlkshk 8-bit tote bag. Kale chips messenger bag forage, vice fashion axe synth disrupt echo park wayfarers celiac yuccie hell of cloud bread. Blue bottle chicharrones activated charcoal, succulents kitsch banjo vegan chartreuse. Lyft distillery chillwave raw denim hexagon pour-over banjo tilde put a bird on it ugh affogato. Asymmetrical iceland hammock cornhole microdosing green juice. Crucifix cold-pressed kombucha cardigan semiotics wolf moon polaroid. Artisan ramps iPhone deep v iceland. Mumblecore farm-to-table chia green juice, vinyl gochujang lomo sriracha tacos cliche literally pour-over. </p>
+            <p className="tinted">The project takes its inspiration from the liqueur of the same name. A bold,yet finely nuanced, alcoholic brew of over 130 herbs and spices. It inspired this fancy and fanciful vision of French cuisine as if half-remembered after an elongated and slightly off the beaten path journey along the spice routes of old.</p>
     
             <h2>team</h2>
             <div className="team">

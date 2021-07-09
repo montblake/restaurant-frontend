@@ -217,6 +217,7 @@ footer {
     background: rgba(0,0,0,0.5);
     padding: 4rem;
     border: 1px solid rgb(171, 215, 130);
+    margin: 4rem;
 }
 
 .content-child {
@@ -462,6 +463,10 @@ h2 {
 
 }
 
+h2:last-of-type {
+    margin-top: 3rem;
+}
+
 // Temp
 .menu-container {
     padding: 8rem;
@@ -472,6 +477,10 @@ h2 {
 
 .dish {
     padding-bottom: 1.6rem;
+}
+
+.dish:last-of-type {
+    margin-bottom:  2.4rem;
 }
 
 .dish h3 {
@@ -493,6 +502,18 @@ h2 {
     font-size: 1.6rem;
     color: rgb(239, 249, 233);
     font-style: italic;
+}
+
+.menu-container > div > h3 {
+    font-family: Rokkitt, serif;
+    font-weight: 100;
+    font-size: 2rem;
+    letter-spacing: .25rem;
+    text-transform: uppercase;
+    width: 33%;
+    padding: 1rem;
+    margin: 0 auto 1rem auto;
+    color:rgba(199, 188, 92, .5);
 }
 
 // Add New Dish
@@ -690,6 +711,36 @@ input[type=radio] {
 
 // Btn for current menu special
 .currentMenu {
-    color:rgb(140, 206, 77);
-    border: 1px solid rgb(140, 206, 77) !important;
+    color:rgb(199, 188, 92);
+    border: 1px solid rgb(199, 188, 92) !important;
+    font-size: 2.4rem;
 }
+
+// map from Visit page
+.map-frame {
+    margin: 0 auto;
+    width: 66%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+
+}
+
+.map-frame > img {
+    width: 100%;
+
+}
+
+.visiting-hours {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    line-height: 1rem;
+    height: .8rem;;
+
+}
+
+
