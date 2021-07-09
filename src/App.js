@@ -16,7 +16,7 @@ function App() {
       logoElem.style.fontSize = "15vw";
       mainNavElem.style.background = "linear-gradient( black 25%, transparent 100%)";
     } else {
-      logoElem.style.fontSize = "8rem";
+      logoElem.style.fontSize = "6rem";
       mainNavElem.style.background = "black";
   
     }
