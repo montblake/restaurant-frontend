@@ -43,6 +43,7 @@ function Header(props) {
                     <div>Reservations</div>
                 </Link>
             </nav>
+            
         </header>
     );
 }

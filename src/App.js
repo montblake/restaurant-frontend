@@ -10,16 +10,15 @@ function App() {
 
   function handleScroll(event) {
     const logoElem = document.querySelector("#logo");
-    const logoContainer = document.querySelector("#logoLink");
     const mainNavElem = document.querySelector(".mainNav");
+ 
     if (event.target.scrollTop < 500){
       logoElem.style.fontSize = "15vw";
-      logoContainer.style.background = "none";
       mainNavElem.style.background = "linear-gradient( black 25%, transparent 100%)";
     } else {
-      logoElem.style.fontSize = "6rem";
-      logoContainer.style.background = "black";
-      mainNavElem.style.background = "none";
+      logoElem.style.fontSize = "8rem";
+      mainNavElem.style.background = "black";
+  
     }
   }
 
